@@ -3,14 +3,15 @@ package interation
 import (
 	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestRepeat(t *testing.T) {
 	got := Repeat("a", 10)
 	want := "aaaaaaaaaa"
-	if got != want {
-		t.Errorf("Expected %q but got %q", want, got)
-	}
+
+	assert.Equal(t, got, want)
 }
 
 func ExampleRepeat() {
